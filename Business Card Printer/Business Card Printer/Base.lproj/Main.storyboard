@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Access Code View Controller-->
+        <scene sceneID="iNO-aM-TtU">
+            <objects>
+                <viewController storyboardIdentifier="accessCodeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bsx-wN-VAI" customClass="accessCodeViewController" customModule="Business_Card_Printer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWV-7K-kvW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBA-52-uwX">
+                                <rect key="frame" x="76" y="273" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Access Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBj-kH-phv">
+                                <rect key="frame" x="115" y="244" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgZ-y4-ppz">
+                                <rect key="frame" x="163" y="311" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitCode:" destination="Bsx-wN-VAI" eventType="touchUpInside" id="mtX-no-fIp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fYs-tB-ziw" firstAttribute="trailing" secondItem="RBA-52-uwX" secondAttribute="trailing" constant="79" id="ExC-4S-hHJ"/>
+                            <constraint firstItem="uBj-kH-phv" firstAttribute="centerX" secondItem="fYs-tB-ziw" secondAttribute="centerX" id="Q6K-Kp-5Pz"/>
+                            <constraint firstItem="RBA-52-uwX" firstAttribute="top" secondItem="uBj-kH-phv" secondAttribute="bottom" constant="8" id="S0P-2v-Lim"/>
+                            <constraint firstItem="dgZ-y4-ppz" firstAttribute="centerX" secondItem="fYs-tB-ziw" secondAttribute="centerX" id="ZvQ-Jh-2Lk"/>
+                            <constraint firstItem="RBA-52-uwX" firstAttribute="leading" secondItem="fYs-tB-ziw" secondAttribute="leading" constant="76" id="e1x-hA-Udx"/>
+                            <constraint firstItem="uBj-kH-phv" firstAttribute="top" secondItem="fYs-tB-ziw" secondAttribute="top" constant="200" id="lUI-bf-M2m"/>
+                            <constraint firstItem="dgZ-y4-ppz" firstAttribute="top" secondItem="RBA-52-uwX" secondAttribute="bottom" constant="8" id="whX-43-or4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fYs-tB-ziw"/>
+                    </view>
+                    <connections>
+                        <outlet property="codeField" destination="RBA-52-uwX" id="vZm-2Q-6LN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5P-s7-Mj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1150" y="120"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="mainViewController" customModule="Business_Card_Printer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO7-kg-HB3">
+                                <rect key="frame" x="16" y="44" width="104" height="30"/>
+                                <state key="normal" title="Print New Card"/>
+                                <connections>
+                                    <action selector="printNewCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdG-bA-jsR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1f-PB-CRV">
+                                <rect key="frame" x="223" y="44" width="136" height="30"/>
+                                <state key="normal" title="Choose Card Image"/>
+                                <connections>
+                                    <action selector="choosePictureButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpn-Vn-hUG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-5u-zWo">
+                                <rect key="frame" x="337" y="744" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="7lq-Sr-5J5" kind="presentation" id="x3Q-px-Iyo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-MS-lWr">
+                                <rect key="frame" x="16" y="740" width="139" height="30"/>
+                                <state key="normal" title="Choose Background"/>
+                                <connections>
+                                    <action selector="pickBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfI-GG-lRJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2VO-5u-zWo" secondAttribute="trailing" constant="16" id="6bh-dt-Ay2"/>
+                            <constraint firstItem="pO7-kg-HB3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6zt-Qo-RRy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ggH-MS-lWr" secondAttribute="bottom" constant="8" id="C5a-pS-Fht"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z1f-PB-CRV" secondAttribute="trailing" constant="16" id="Qad-Kn-uZ6"/>
+                            <constraint firstItem="z1f-PB-CRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dTC-EB-z9u"/>
+                            <constraint firstItem="pO7-kg-HB3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kCa-6x-NIt"/>
+                            <constraint firstItem="ggH-MS-lWr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mXV-dt-OO1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2VO-5u-zWo" secondAttribute="bottom" constant="12" id="qwg-wt-7AU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="panController" destination="rpp-WH-yPj" id="AZc-aQ-Atq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="7eT-9J-NQG"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="rpp-WH-yPj">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="H9Q-IP-IeY"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-186" y="132"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="NOQ-U0-5Xz">
+            <objects>
+                <viewController id="7lq-Sr-5J5" customClass="aboutViewController" customModule="Business_Card_Printer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KTa-5p-6aD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3m-I2-BCf">
+                                <rect key="frame" x="321" y="44" width="38" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="dismissAbout:" destination="7lq-Sr-5J5" eventType="touchUpInside" id="VmG-T8-dNp"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="MbQ-e8-1Cz">
+                                <rect key="frame" x="63.666666666666657" y="97.000000000000014" width="247.99999999999997" height="200.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Card Printer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cs-ZG-bn2">
+                                        <rect key="frame" x="41.333333333333343" y="0.0" width="165" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concept by Christophe Jelinski" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3B-N1-1BM">
+                                        <rect key="frame" x="17.333333333333343" y="41.333333333333343" width="213" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVs-6R-1Bm">
+                                        <rect key="frame" x="30.333333333333343" y="80.333333333333343" width="187" height="30"/>
+                                        <state key="normal" title="Visit christophejelinski.com">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openWebsite:" destination="7lq-Sr-5J5" eventType="touchUpInside" id="V40-wQ-CwS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Written and Coded by Jacob McGee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3x-bd-2OJ">
+                                        <rect key="frame" x="0.0" y="131.33333333333334" width="248" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZd-vE-ic2">
+                                        <rect key="frame" x="40" y="170.33333333333331" width="168" height="30"/>
+                                        <state key="normal" title="jmcgee2019@gmail.com">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openEmail:" destination="7lq-Sr-5J5" eventType="touchUpInside" id="7Cx-95-bMB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Use This Application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFK-Wc-irW">
+                                <rect key="frame" x="79.666666666666671" y="362" width="215.66666666666663" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-nB-MsF">
+                                <rect key="frame" x="16" y="390.33333333333331" width="343" height="143.33333333333331"/>
+                                <string key="text">Select a card image by tapping Choose Card Image. You can choose an image from your photo library or you can take a photo of your card from this app. The app works best if you use an image with the same dimensions as your business card. Once you have printed your business card, you can print another one by tapping the Print New Card button.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lFK-Wc-irW" firstAttribute="leading" secondItem="fzB-rT-hYH" secondAttribute="leading" constant="79.666666666666671" id="1J2-Zc-xRI"/>
+                            <constraint firstItem="bIA-nB-MsF" firstAttribute="top" secondItem="lFK-Wc-irW" secondAttribute="bottom" constant="8" id="3un-Qu-QU0"/>
+                            <constraint firstItem="fzB-rT-hYH" firstAttribute="trailing" secondItem="t3m-I2-BCf" secondAttribute="trailing" constant="16" id="6Bv-CR-z4D"/>
+                            <constraint firstItem="MbQ-e8-1Cz" firstAttribute="centerX" secondItem="KTa-5p-6aD" secondAttribute="centerX" id="Ba8-14-2mw"/>
+                            <constraint firstItem="fzB-rT-hYH" firstAttribute="trailing" secondItem="lFK-Wc-irW" secondAttribute="trailing" constant="79.666666666666629" id="J99-YZ-9lx"/>
+                            <constraint firstItem="lFK-Wc-irW" firstAttribute="top" secondItem="MbQ-e8-1Cz" secondAttribute="bottom" constant="64.666666666666629" id="Qzf-Zi-XPh"/>
+                            <constraint firstItem="fzB-rT-hYH" firstAttribute="trailing" secondItem="bIA-nB-MsF" secondAttribute="trailing" constant="16" id="TZS-Ct-Zjv"/>
+                            <constraint firstItem="t3m-I2-BCf" firstAttribute="top" secondItem="fzB-rT-hYH" secondAttribute="top" id="bNh-6C-sTf"/>
+                            <constraint firstItem="bIA-nB-MsF" firstAttribute="leading" secondItem="fzB-rT-hYH" secondAttribute="leading" constant="16" id="fo3-Qi-PI4"/>
+                            <constraint firstItem="MbQ-e8-1Cz" firstAttribute="top" secondItem="fzB-rT-hYH" secondAttribute="top" constant="53.000000000000014" id="fvx-XL-5bo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fzB-rT-hYH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9b-Yu-KZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567.20000000000005" y="132.26600985221674"/>
+        </scene>
+    </scenes>
+</document>
