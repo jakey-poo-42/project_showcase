@@ -264,7 +264,7 @@ class mainViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // Instead of fucking with Core Data, I decided to place a text file on the user's device. The text file will contain the password if the user has put in the correct password and "badKey" otherwise. Core Data was causing too many problems to just check one god damn bool value, so I did this instead
+        // Instead of messing with Core Data, I decided to place a text file on the user's device. The text file will contain the password if the user has put in the correct password and "badKey" otherwise. Core Data was causing too many problems to just check a bool value, so I did this instead
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let accessCodeView = storyboard.instantiateViewController(withIdentifier: "accessCodeViewController")
         
