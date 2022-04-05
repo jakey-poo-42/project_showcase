@@ -8,6 +8,9 @@ Developed for a client but never saw the app store due to incredibly specific di
 ### Monopoly
 This was a project for my Software Engineering class, with the purpose of teaching us about using git and unit tests. I developed almost all of the logic in the game, including the game engine, and the unit tests, while my groupmates developed the UI. The application is a very rudimentary implementation of the popular board game Monopoly. Players would move around the board, buying and trading properties until a monopoly of a color group was obtained. Once a monopoly was obtained, the player could then buy houses and hotels for their properties, which would raise the "rent" (cost of landing on the space) for other players. One player could have multiple monopolies at any time. The game ended after a set number of turns. If a player would go bankrupt, their money was set to $0 and play resumed as normal, without eliminating players. Differences in rules between this game and the real Monopoly are the result of lack of time to complete them.
 
+### AI Preference Engine
+This was a project for my Introduction to AI class, for teaching us how to use SAT solvers and to develop the beginnings of an AI. This engine is useful for anyone who is faced with preference-based decisions. The user first defines the different attributes that each object can have. For our example, we used car buying. The car can be hybrid or electric, two-wheel drive or four-wheel drive, include GPS or no GPS, et cetera. The user can then define hard constraints on all the objects and input preferences in penalty, possibilistic, or qualitative choice logic. The program will use this data and (a) generate a list of all objects that conform to the hard constraints and (b) provide a list of all objects that are considered optimal under the logic rules. In this project, I wrote the logic for the AI while the rest of my project team worked on the GUI and file I/O.
+
 ## Contact Info
 Jacob McGee
 
@@ -15,4 +18,4 @@ jbmcgee2019@gmail.com
 
 https://www.linkedin.com/in/jacob-mcgee-a502a0139/
 
-This code belongs to me and anyone else who may have worked on these projects. Use of this code is forbidden unless you have contacted me about using it.
+This code belongs to me and anyone else who may have worked on these projects. Use of this code is forbidden without express written consent from me.
