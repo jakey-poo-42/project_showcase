@@ -1,0 +1,6 @@
+four-seater BT six-seater IF leather
+hybrid BT electric IF four-wheel
+5L BT 3.8L IF six-seater
+gps BT no-gps IF
+hybrid BT electric IF off-road
+automatic AND V8 BT manual AND V8 BT manual AND V6 IF off-road

@@ -1,0 +1,6 @@
+leather AND six-seater, 2
+electric AND four-wheel, 5
+3.8L AND six-seater, 1
+no-gps, 6
+electric AND off-road, 8
+manual AND off-road OR V6 AND off-road, 3

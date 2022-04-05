@@ -1,0 +1,6 @@
+hybrid OR automatic
+hybrid OR powered
+hybrid OR gps
+powered OR no-gps
+two-wheel OR 5L
+V6 OR 3.8L

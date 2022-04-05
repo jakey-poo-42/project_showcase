@@ -1,0 +1,6 @@
+leather AND six-seater, 0.8
+electric AND four-wheel, 0.5
+3.8L AND six-seater, 0.9
+no-gps, 0.4
+electric AND off-road, 0.2
+manual AND off-road OR V6 AND off-road, 0.7

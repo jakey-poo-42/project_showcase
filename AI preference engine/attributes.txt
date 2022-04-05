@@ -1,0 +1,10 @@
+Drive: two-wheel, four-wheel
+Fuel: hybrid, electric
+Windows: powered, not-powered
+Navigation: gps, no-gps
+Size: 3.8L, 5L
+Seats: four-seater, six-seater
+Upholstry: leather, canvas
+Gearbox: automatic, manual
+Cylinders: V6, V8
+Off-road: off-road, on-road
